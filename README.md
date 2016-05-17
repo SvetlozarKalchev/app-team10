@@ -3,24 +3,24 @@ Meteor project for our song recommendation app.
 
 ## Directory Structure
 
-###./builds
+### /builds
 Contains built versions of the app. In our case, this would be an
 android studio project.
 
-###./client
+### /client
 All code that runs on the user-facing side.
 
-###./docs
+### /docs
 Documentation for the project.
 
-###./public
+### /public
 Assets like images and videos belong here.
 
-###./src
+### /src
 Contains source code files.
 
-####./client
+#### /src/client
 All code that runs on the user-facing side.
 
-####./server
+#### /src/server
 All code that runs on the server. Stuff like database connections, user authentication, recommendation engine, etc.
