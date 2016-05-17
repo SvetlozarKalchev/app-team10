@@ -16,5 +16,11 @@ Documentation for the project.
 ###./public
 Assets like images and videos belong here.
 
-###./server
+###./src
+Contains source code files.
+
+####./client
+All code that runs on the user-facing side.
+
+####./server
 All code that runs on the server. Stuff like database connections, user authentication, recommendation engine, etc.
