@@ -1,20 +1,19 @@
 <template name="artist_selection">
+  <div class="container">
 
-  <div class="artist_selection_content">
+    <div class="artist_selection_content">
 
-    <h1>Select artists you like:</h1>
-    <input type="text" name="search_artists" value="Search artists by name">
+      <h1>Select artists you like:</h1>
+      <input type="text" name="search_artists" placeholder="Search artists by name">
 
-    <div class="artist_box">
+      <div class="artist_box">
+        <img src="radiohead.jpg" alt="">
+      </div>
 
-      <img src="/public/arctic_monkeys.jpg" alt="">
+      <button class="next">Next</button>
+      <progress value="20" max="50">Step 1/5</progress>
 
     </div>
 
-    <button>Next</button>
-
-    <progress value="10" max="50">Step 1/5</progress>
-
   </div>
-
 </template>
