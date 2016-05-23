@@ -1,10 +1,10 @@
 import { Template } from 'meteor/templating';
 
-// import './artist_selection.html'
+import './artist_selection.html'
 
 // This code adds a redirect event to the next button on the page
-Template.start_screen.events({
+Template.artist_selection.events({
   'click .next'(event) {
-    FlowRouter.redirect('/artist-selection')
+    FlowRouter.redirect('/genre-selection')
   }
 });
