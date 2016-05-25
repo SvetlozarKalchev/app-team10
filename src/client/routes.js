@@ -5,7 +5,7 @@
 FlowRouter.route('/', {
 
   action: () => {
-    BlazeLayout.render('app', {content: "start_screen"});
+    BlazeLayout.render('app', { content: 'start_screen' });
   }
 
 });
@@ -14,7 +14,7 @@ FlowRouter.route('/', {
 FlowRouter.route('/artist-selection', {
 
   action: () => {
-    BlazeLayout.render('app', {content: 'artist_selection'});
+    BlazeLayout.render('app', { content: 'artist_selection' });
   }
 
 });
@@ -23,7 +23,16 @@ FlowRouter.route('/artist-selection', {
 FlowRouter.route('/genre-selection', {
 
   action: () => {
-    BlazeLayout.render('app', {content: 'genre_selection'});
+    BlazeLayout.render('app', { content: 'genre_selection' });
+  }
+
+});
+
+// Routing method for the login screen
+FlowRouter.route('/login', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'login' });
   }
 
 });
