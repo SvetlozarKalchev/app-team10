@@ -36,3 +36,44 @@ FlowRouter.route('/login', {
   }
 
 });
+
+FlowRouter.route('/register', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'register' });
+  }
+
+});
+
+
+FlowRouter.route('/explore', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'explore' });
+  }
+
+});
+
+FlowRouter.route('/music-player', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'music_player' });
+  }
+
+});
+
+FlowRouter.route('/playlist', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'playlist' });
+  }
+
+});
+
+FlowRouter.route('/recommended-song', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'recommended_song' });
+  }
+
+});
