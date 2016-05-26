@@ -1,5 +1,35 @@
 // main: main.styl, compress: true, sourcemap:false
+box_size = 80px
+
+h2
+  text-align center
+  font bold Tahoma
+
+.genre_box_container
+  width: 100vw  //viewport width
+
+.three_genre_boxes
+  width: 100vw
+  height: box_size
+  text-align: center
+
+.genre_box
+  display inline-block
+  margin 15px
+  margin-left 20px
+  text-align: center
+  width box_size
+  height box_size
+  line-height: 60px
+
+.genre_box p
+  position absolute //READ
+  //left 50% //hack
+  //margin-left: -40px
+  margin-left 20px
+  font-weight bold
+
 
 img
-  width 200px
-  height 200px
+  width box_size
+  height box_size
