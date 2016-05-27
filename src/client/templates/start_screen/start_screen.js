@@ -3,7 +3,7 @@ import { Template } from 'meteor/templating';
 Template.start_screen.events({
   // This code adds a redirect event to the next button on the page
   'click .next'(event) {
-    FlowRouter.redirect('/artist-selection');
+    FlowRouter.redirect('/genre-selection');
   },
 
   // Add redirect to login page
