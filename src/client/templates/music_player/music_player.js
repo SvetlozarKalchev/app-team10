@@ -12,7 +12,9 @@ Template.music_player.events({
     var incrementProgressBar = setInterval(function() {
       // Increment the bar value and set it in the HTML
       currentBarValue+=5;
+
       progressBar.setAttribute('value', currentBarValue);
+
     }, 2000)
   }
 })
