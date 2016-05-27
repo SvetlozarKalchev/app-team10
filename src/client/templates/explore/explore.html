@@ -1,7 +1,31 @@
 <template name="explore">
   <div class="container">
+    <div class="search_content" style="height: 80px; background-color: #26ADE4">
 
+      <input type = "search" id = "search" placeholder="Search music, artists..." style="position:relative; left: 20px; top:20px"/>
+      <img id="playlist_icon" src=\icons\Playlist.png alt="" style="position:relative; left:150px; top: 20px; width:50px; height:25px">
+      <img id="user_icon" src=\icons\Head.png alt="" style="position:relative; left:120px; top: 20px; width:25px; height:25px"/>
 
+    </div>
 
+    <div class="music_recommendation_content">
+      <img id="musiclist_1" src=radiohead.jpg alt="" style="position: relative; left:20px; top: 30px; width: 120px; height: 120px"/>
+      <img id="musiclist_2" src=radiohead.jpg alt="" style="position:relative; left: 20px; top: 30px; width: 120px; height: 120px"/>
+      <img id="musiclist_3" src=radiohead.jpg alt="" style="position:relative; left: 20px; top: 30px; width: 120px; height: 120px"/>
+      <div class="loading" style="width: 100%; position: absolute; bottom: 70px">
+        <p style="text-align: center; color:#ABB2B9; padding:0px">pull to load</p>
+        <img id="loding_bar" src=\icons\Loading.png alt="" style="display: block; margin: auto; position: relative; bottom: 5px; width: 20px; height: 10px"/>
+
+      </div>
+    </div>
+
+    <div class="bottom_bar" style="position: absolute; bottom: 0; orientation: horizontal">
+
+      <img id="recommend" src=\icons\Recommend.png alt="" style="position:absolute; left:5px; top: 12px; width:28px; height: 35px">
+      <img id="mymusic" src=\icons\MyMusic.png alt="" style="position:absolute; left:218px; top:18px; width:30px;height:30px">
+      <button class="recommend" style="position:absotlute; left: 0; width: 203px; height:70px;background-color:transparent;font-size:25px; color: #FFFFFF">Recommend</button>
+      <button class="my_music" style="position:relative; left: 0; width: 203px; height:70px;background-color:transparent;font-size:25px; color: #FFFFFF">My Music</button>
+
+    </div>
   </div>
 </template>
