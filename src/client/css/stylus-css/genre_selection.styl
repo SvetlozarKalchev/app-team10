@@ -1,93 +1,71 @@
-// // main: main.styl, compress: true, sourcemap:false
-// box_size = 80px
-//
-// h2
-//   text-align center
-//   font bold Tahoma
-//
-// .genre_box_container
-//   width 100vw
-//   margin 0 auto
-//   //margin 15px
-//
-// .three_genre_boxes
-//   width 100vw
-//   //height 150px
-//   text-align center
-//
-// .genre_box
-//   display inline-block
-//   margin 15px
-//   text-align: center
-//   //border: 3px solid green;
-//
-// .genre_box p
-//   text-align center
-//   margin 5px
-//
-// img
-//   width box_size
-//   height box_size
-//
-// .footer_container
-//   width: 100vw
-//   height 200px
-//   display: inline-block
-//
-// /*.footer
-//   display: inline-block;*/
-//
-// .footer_container .progress
-//   display: inline-block;
-//   width 100px
-//   height 30px
-//   float left
-//   margin-left 50px
-//   font-weight bold
-//
-// .next
-//   display: inline-block;
-//   text-align: center
-//   width: 100px
-//   float right
-//   background #26ADE4
-//   //margin-right: 53px;
-//   margin 10px
-//
-// /*.button
-//   float right;
-//   margin auto
-//   //width: 30%
-//   text-align center*/
-//
-//
-//
-// /*.genre_box_container
-//   width: 100vw  //viewport width
-//
-// .three_genre_boxes
-//   width: 100vw
-//   height: box_size
-//   text-align: center
-//
-// .genre_box
-//   display inline-block
-//   margin 15px
-//   margin-left 20px
-//   text-align: center
-//   width box_size
-//   height box_size
-//   line-height: 60px
-//
-// .genre_box p
-//   //position absolute //READ
-//   //left 50% //hack
-//   //margin-left: -40px
-//   //margin-left 20px
-//   font-weight bold
-//
-//
-// img
-//   width box_size
-//   height box_size
-// */
+// main: main.styl, compress: true, sourcemap:false
+
+box_size = 90px
+
+.genre_selection_content h2
+  text-align center
+  font-weight bold
+  margin-top 20px
+
+.genre_selection_content
+  width 100vw
+  height 100vh
+
+.genre_selection_content .genre_box_container
+  width 100vw
+  margin 0 auto
+
+.genre_selection_content .three_genre_boxes
+  width 100vw
+  height 140px
+  text-align center
+
+.genre_selection_content .genre_box
+  display inline-block
+  margin 15px
+  text-align center
+
+.genre_selection_content .genre_box p
+  text-align center
+  font-size 12px
+  margin 5px
+  font-weight bold
+.genre_selection_content img
+  width box_size
+  height box_size
+  border-radius 50%
+
+.genre_selection_content .footer_container
+  width 318px
+  height 100px
+  margin 0 auto
+  margin-top 30px
+
+.genre_selection_content .footer_container .footer
+  display inline-block
+  font-weight bold
+
+.genre_selection_content .footer_container .progress
+  position relative
+  float left
+  width 100px
+  height 30px
+  font-weight bold
+  font-size 18px
+  bottom 2px
+
+.genre_selection_content .footer_container .next
+  float right
+  width 120px
+  height 50px
+  text-align center
+  background #26ADE4
+  line-height 50px
+  font-size 20px
+
+// Styles for highlighting the element onClick
+.highlight
+  //border:#CCCCCC thin solid;
+  //filter: brightness
+  background-color: #424242
+  box-shadow 20px 20px 25px 15px #333

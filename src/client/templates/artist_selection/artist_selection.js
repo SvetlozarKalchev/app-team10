@@ -15,6 +15,7 @@ function sendSelectedArtists() {
 }
 
 
+var isArtistBoxClicked = false;
 
 Template.artist_selection.events({
   // This code adds a redirect event to the next button on the page
@@ -30,6 +31,9 @@ Template.artist_selection.events({
     // Select only the element that has an event listener attached
     var clickedElement = event.currentTarget;
 
+    if(!isArtistBoxClicked){
+
+    }
     var currentClass = clickedElement.getAttribute('class');
 
     // Add new class to the element with an attached event listener
