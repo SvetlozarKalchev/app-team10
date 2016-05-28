@@ -1,5 +1,68 @@
 // main: main.styl, compress: true, sourcemap:false
+box_size = 90px
 
-img
-  width 200px
-  height 200px
+.artist_selection_content h2
+  text-align center
+  font-weight bold
+  margin-top 20px
+
+.artist_selection_content
+  width 100vw
+  height 100vh
+
+.artist_selection_content .artist_box_container
+  width 100vw
+  margin 0 auto
+
+
+.artist_selection_content .three_artist_boxes
+  width 100vw
+  height 140px
+  text-align center
+
+.artist_selection_content .artist_box
+  display inline-block
+  margin 15px
+  text-align center
+
+.artist_selection_content .artist_box p
+  text-align center
+  font-size 12px
+  margin 5px
+  font-weight bold
+.artist_selection_content img
+  width box_size
+  height box_size
+  border-radius 50%
+
+.artist_selection_content .footer_container
+  width 318px
+  height 100px
+  margin 0 auto
+  margin-top 30px
+
+.artist_selection_content .footer_container .footer
+  display inline-block
+  font-weight bold
+
+.artist_selection_content .footer_container .progress
+  position relative
+  float left
+  width 100px
+  height 30px
+  font-weight bold
+  font-size 18px
+  bottom 2px
+
+.artist_selection_content .footer_container .next
+  float right
+  width 120px
+  height 50px
+  text-align center
+  background #26ADE4
+  line-height 50px
+  font-size 20px
+
+// Styles for highlighting the element onClick
+.highlight
+  box-shadow 0px 12px 25px 15px #333
