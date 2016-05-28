@@ -1,27 +1,57 @@
 <template name="recommended_song">
   <div class="container">
-    <div class="search_content" style="height: 80px; background-color: #26ADE4">
+    <div class="search_content">
 
-      <input type = "search" id = "search" placeholder="Search music, artists..." style="position:relative; left: 20px; top:20px"/>
-      <img id="playlist_icon" src=\icons\Playlist.png alt="" style="position:relative; left:150px; top: 20px; width:50px; height:25px">
-      <img id="user_icon" src=\icons\Head.png alt="" style="position:relative; left:120px; top: 20px; width:25px; height:25px"/>
+      <div class="drop_down">
+
+        <img class="menu_icon" src="\icons\Menu.png" alt="" />
+        <div id="drop_down_content" class="drop_down_content">
+
+          <a href="/music-player">Music Player</a>
+          <a href="/playlist">Playlist</a>
+          <a href="/recommended-song">Recommend</a>
+          <a href="/explore">Explore</a>
+
+        </div>
+
+      </div>
+
+      <input class='search' type="search_bar" name="search_bar" placeholder="Search music, artists...">
+      <img class="playlist_icon" src=\icons\Playlist.png alt=""/>
+      <img class="user_icon" src=\icons\Head.png alt=""/>
 
     </div>
 
-    <div class="song_list_content" style="heght: 350px">
-
-      <button class="button" style="width:100px;height:30px;background-color:transparent; margin-top:10px; margin-left:30px; font-size:20px; color: #FFFFFF">Play All</button>
-      <hr style="align: center; color: #FFFFFF; size: 1px; width: 360px;">
+    <div class="song_list_content">
+      <img class="play_all_icon" src="\icons\Playall.png" alt="" />
+      <p class="play_all">Play All</p>
+      <hr>
+      <div class="music_box">
+        <div class="music_info">
+          <p class="song_name">song name</p>
+          <p class="artist">artist</p>
+        </div>
+        <div class="icons">
+          <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
+          <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
+        </div>
+        <hr>
+      </div>
 
     </div>
 
-    <div class="bottom_bar" style="position: absolute; bottom: 0; orientation: horizontal">
+    <div id="more_info_content" class="more_info_content">
+      <a href="/recommended-song">Find Similar Songs</a>
+      <a href="/music-player">Music Info</a>
+    </div>
 
-      <img id="explore" src=\icons\Explore.png alt="" style="position:absolute; left:15px; top: 12px; width:35px; height: 35px">
-      <img id="mymusic" src=\icons\MyMusic.png alt="" style="position:absolute; left:218px; top:18px; width:30px;height:30px">
-      <button class="explore" style="position:absotlute; left: 0; width: 203px; height:70px;background-color:transparent;font-size:25px; color: #FFFFFF">Explore</button>
-      <button class="my_music" style="position:relative; left: 0; width: 203px; height:70px;background-color:transparent;font-size:25px; color: #FFFFFF">My Music</button>
-      
+    <div class="bottom_bar">
+
+      <img class="explore_icon" src=\icons\Explore.png alt="" >
+      <img class="mymusic_icon" src=\icons\MyMusic.png alt="" >
+      <button class="explore">Explore</button>
+      <button class="my_music">My Music</button>
+
     </div>
   </div>
 </template>
