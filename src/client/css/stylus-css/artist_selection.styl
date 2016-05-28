@@ -1,59 +1,67 @@
 // main: main.styl, compress: true, sourcemap:false
-box_size = 80px
+box_size = 90px
 
-h2
+.artist_selection_content h2
   text-align center
-  font bold Tahoma
+  font-weight bold
+  margin-top 20px
 
-.artist_box_container
+.artist_selection_content
+  width 100vw
+  height 100vh
+
+.artist_selection_content .artist_box_container
   width 100vw
   margin 0 auto
-  //margin 15px
 
-.three_artist_boxes
+.artist_selection_content .three_artist_boxes
   width 100vw
-  //height 150px
+  height 140px
   text-align center
 
-.artist_box
+.artist_selection_content .artist_box
   display inline-block
   margin 15px
-  text-align: center
-  //border: 3px solid green;
-
-.artist_box p
   text-align center
-  font: 12px bold
-  margin 5px
 
-img
+.artist_selection_content .artist_box p
+  text-align center
+  font-size 12px
+  margin 5px
+  font-weight bold
+.artist_selection_content img
   width box_size
   height box_size
+  border-radius 50%
 
-.footer_container
-  position absolute
-  bottom -120px
-  width: 100vw
-  height 200px
+.artist_selection_content .footer_container
+  width 318px
+  height 100px
+  margin 0 auto
+  margin-top 30px
 
-.footer
-  display: inline-block;
-
-.footer_container .progress
-  position absolute
-  width 100px
-  height 30px
-  margin-left 50px
+.artist_selection_content .footer_container .footer
+  display inline-block
   font-weight bold
 
-.next
-  position absolute
-  text-align: center
-  width: 100px
+.artist_selection_content .footer_container .progress
+  position relative
+  float left
+  width 100px
+  height 30px
+  font-weight bold
+  font-size 18px
+  bottom 2px
+
+.artist_selection_content .footer_container .next
+  float right
+  width 120px
+  height 50px
+  text-align center
   background #26ADE4
-  right 38px
+  line-height 50px
+  font-size 20px
 
 // Styles for highlighting the element onClick
 .highlight
-  box-shadow:0px 12px 25px 9px #332;
-  //border 10px solid white
+  box-shadow 0px 12px 25px 15px #333

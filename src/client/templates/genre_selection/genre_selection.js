@@ -18,7 +18,7 @@ import { Template } from 'meteor/templating';
 
       sendSelectedGenres();
 
-      FlowRouter.redirect('/register');
+      FlowRouter.redirect('/artist-selection');
 
   },
 
