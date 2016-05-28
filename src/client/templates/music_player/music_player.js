@@ -1,6 +1,10 @@
 import { Template } from 'meteor/templating'
 
 Template.music_player.events({
+  // Go back to recommended songs page
+  'click .back-button'(event) {
+    FlowRouter.redirect('/recommended-song')
+  },
   // Event that start song playback. It's not real playback.
   // Just a function that increments the song progress bar over time.
   'click .play-song'(event) {
