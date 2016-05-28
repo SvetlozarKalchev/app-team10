@@ -1,7 +1,44 @@
 <template name="explore">
   <div class="container">
+    <div class="search_content" style="height: 80px; background-color: #26ADE4">
 
+      <div class="drop_down">
 
+        <img class="menu_icon" src="\icons\Menu.png" alt="" />
+        <div id="drop_down_content" class="drop_down_content">
 
+          <a href="/music-player">Music Player</a>
+          <a href="/playlist">Playlist</a>
+          <a href="/recommended-song">Recommend</a>
+          <a href="/explore">Explore</a>
+
+        </div>
+      </div>
+
+      <input type = "search" id = "search" placeholder="Search music, artists..."/>
+      <img class="playlist_icon" src=\icons\Playlist.png alt=""/>
+      <img class="user_icon" src=\icons\Head.png alt=""/>
+
+    </div>
+
+    <div class="music_recommendation_content">
+      <img class="musiclist_icon" src=radiohead.jpg alt="" />
+      <img class="musiclist_icon" src=radiohead.jpg alt="" />
+      <img class="musiclist_icon" src=radiohead.jpg alt="" />
+      <div class="loading">
+        <p>pull to load</p>
+        <img class="loading_bar" src=\icons\Loading.png alt=""/>
+
+      </div>
+    </div>
+
+    <div class="bottom_bar">
+
+      <img class="recommend_icon" src=\icons\Recommend.png alt="">
+      <img class="mymusic_icon" src=\icons\MyMusic.png alt="">
+      <button class="recommend">Recommend</button>
+      <button class="my_music">My Music</button>
+
+    </div>
   </div>
 </template>
