@@ -1,58 +1,40 @@
 // main: main.styl, compress: true, sourcemap:false
 box_size = 90px
 
-.login_content h2
-  text-align center
-  font-weight bold
-  margin-top 20px
-
 .login_content
   width 100vw
   height 100vh
+  overflow-x hidden
 
-
-.login .footer_container .footer
-  display inline-block
+.login_content h2
+  text-align center
   font-weight bold
 
 #authentication
-  margin 10vh 5vw 6vh 5vw
-
-
-#signInForm
-  display inline-block
-  border solid 1px #C9D8EA
-  border-radius: 6px
+  margin 0 auto
+  margin-top 35px
+  text-align center
 
 .log
-  margin: 4vh
-  width: 74 vw
-  height: 8vh
+  margin 4vh
+  width 74vw
+  height 8vh
   border solid 1px #C9D8EA
-  border-radius: 8px
-  padding-left:3vw
+  border-radius 8px
+  padding-left 3vw
+  line-height 8vh
 
-.submitBtn
-    margin: 4vh 4vh
-    width: 77 vw
-    height: 8vh
-    border solid 1px #C9D8EA
-    border-radius: 8px
-    background-color:#3B5998
-    color:#FFFFFF
-    font-size:22px
-
-.register
-  width: 50vw
-  height: 6vh
-  background-color:#3B5998
-  color:#FFFFFF
-  font-size:22px
-  text-align: center
-  padding-top 1vh
+.login-button
+  margin 4vh 4vh
+  width 77vw
+  height 8vh
   border solid 1px #C9D8EA
-  border-radius: 8px
-  margin 6vh 25vw
+  border-radius 8px
+  background-color #3B5998
+  color #FFFFFF
+  font-size 22px
+  text-align center
+  line-height 8vh
 
 .login_content .footer_container
   width 318px
@@ -65,19 +47,10 @@ box_size = 90px
   font-weight bold
 
 .login_content .footer_container .progress
-  position relative
+  position absolute
   float left
   width 100px
   height 30px
   font-weight bold
   font-size 18px
   bottom 2px
-
-.login_content .footer_container .next
-  float right
-  width 120px
-  height 50px
-  text-align center
-  background #26ADE4
-  line-height 50px
-  font-size 20px
