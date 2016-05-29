@@ -1,20 +1,24 @@
 <template name="register">
  <div class="container">
 
-    <div class="login_content">
-		<div id="indie2">
-            <p id="submenu">Register to get your music</p>
-        </div>
+    <div class="register_content">
+            <h2>Register to get your music</h2>
 
-            <div id="authentication">
+
+    <div id="authenticationReg">
                 <!--onSubmit="formValidationSignUp()"-->
-                <form id="signUpForm" name="signUn">
-                    <input id="usernameReg" type="text" name="usernameReg" placeholder="Username">
-                    <input id="passwordReg" type="password" name="passwordReg" placeholder="Password">
-                    <input id="passwordConfReg" type="password" name="passwordRegConf" placeholder="Confirm Password">
-                    <input class="submitBtn" type="submit" name="submit" value="Registrieren">
-                </form>
-            </div>
+      <form id="signUpForm" name="signUp">
+            <input class="reg" type="text" name="usernameReg" placeholder="Username">
+            <input class="reg" type="password" name="passwordReg" placeholder="Password">
+            <input class="reg" type="password" name="passwordRegConf" placeholder="Confirm Password">
+            <input class="submitBtn" type="submit" name="submit" value="Registrieren">
+      </form>
+    </div>
+      <div class='login'>Login</div>
+			 <div class="footer_container">
+        <p class="progress footer">Step 3/5</p>
+      </div>
+      </div>
 	</div>
- </div>
+
 </template>
