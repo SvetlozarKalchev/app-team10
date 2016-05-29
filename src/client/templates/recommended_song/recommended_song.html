@@ -1,5 +1,57 @@
 <template name="recommended_song">
   <div class="container">
-    <h1>Welcome</h1>
+    <div class="search_content">
+
+      <div class="drop_down">
+
+        <img class="menu_icon" src="\icons\Menu.png" alt="" />
+        <div id="drop_down_content" class="drop_down_content">
+
+          <a href="/music-player">Music Player</a>
+          <a href="/playlist">Playlist</a>
+          <a href="/recommended-song">Recommend</a>
+          <a href="/explore">Explore</a>
+
+        </div>
+
+      </div>
+
+      <input class='search' type="search_bar" name="search_bar" placeholder="Search music, artists...">
+      <img class="playlist_icon" src=\icons\Playlist.png alt=""/>
+      <img class="user_icon" src=\icons\Head.png alt=""/>
+
+    </div>
+
+    <div class="song_list_content">
+      <img class="play_all_icon" src="\icons\Playall.png" alt="" />
+      <p class="play_all">Play All</p>
+      <hr>
+      <div class="music_box">
+        <div class="music_info">
+          <p class="song_name">song name</p>
+          <p class="artist">artist</p>
+        </div>
+        <div class="icons">
+          <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
+          <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
+        </div>
+        <hr>
+      </div>
+
+    </div>
+
+    <div id="more_info_content" class="more_info_content">
+      <a href="/recommended-song">Find Similar Songs</a>
+      <a href="/music-player">Music Info</a>
+    </div>
+
+    <div class="bottom_bar">
+
+      <img class="explore_icon" src=\icons\Explore.png alt="" >
+      <img class="mymusic_icon" src=\icons\MyMusic.png alt="" >
+      <button class="explore">Explore</button>
+      <button class="my_music">My Music</button>
+
+    </div>
   </div>
 </template>

@@ -77,3 +77,11 @@ FlowRouter.route('/recommended-song', {
   }
 
 });
+
+FlowRouter.route('/user-info', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'user_info'});
+  }
+
+});
