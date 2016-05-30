@@ -1,3 +1,4 @@
+/builds
 node_modules/
 /src/client/css/main.css
 songs.db
