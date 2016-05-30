@@ -10,19 +10,22 @@
   width 100vw
   height 80px
   background-color deep_sky_blue
+  z-index 100000
 
+// Drop down menu container
 .drop_down
   position absolute
   left 0px
   top 20px
-  display inline-block
+  height 50px
+  width 50px
 
 .menu_icon
   position relative
-  left 5px
-  top 10px
-  width 18px
-  height 20px
+  left 10px
+  top 5px
+  width 40px
+  height 32px
 
 .drop_down_content
   display none
@@ -30,7 +33,7 @@
   top 60px
   z-index 5
   background-color #f9f9f9
-  min-width 160px
+  width 250px
   box-shadow 0px 8px 16px 0px rgba(0,0,0,0,2)
 
 .drop_down_content a
@@ -47,12 +50,13 @@
   display block
 
 .search_content input
-  float left
-  left 30px
-  top 20px
+  position relative
   width 200px
   height 40px
-  border-radius: 7px
+  top 17px
+  left 80px
+  border-radius 7px
+  text-align center
 
 .music_player_icon
   position relative
@@ -114,27 +118,28 @@
   height 50px
   line-height 0.75
 
+// Icons in the song element
 .icons
-  height 70px
-  float right
   position relative
-  top 25px
-  bottom 50px
+  float right
   right 15px
-  margin auto
+  height 70px
+  top 10px
 
 .song_name
   position relative
+  bottom 5px
   left 10px
   font-size 20px
 
 .artist
   position relative
-  top 0px
+  bottom 10px
   left 10px
   font-size 15px
 
 icon_size = 30px
+
 .delete_icon
   position relative
   width icon_size
@@ -172,26 +177,33 @@ icon_size = 30px
 .show
   display block
 
+// Footer where the explore and my music buttons are
 .bottom_bar
   position absolute
-  bottom: 0
-  div
-    display inline-block
+  width 100vw
+  height 70px
+  bottom 0
 
-.explore_icon
-  width 35px
-  height 35px
+.bottom_bar div
+  display inline-block
 
-.recommend_icon
-  width 20px
-  height 30px
+.explore_button_container
+  position absolute
+  left 0
+  bottom 40px
+  width 50vw
+  height 70px
 
-.explore_button
-  width 203px
+.explore_button_container button
   height 70px
   background-color transparent
   font-size 25px
   color #FFFFFF
+  width 99%
+
+.recommend_icon
+  width 20px
+  height 30px
 
 .recommend_button
   width 203px
