@@ -1,5 +1,8 @@
 <template name="explore">
   <div class="container">
+
+    <div class="margin-element"></div>
+
     <div class="search_content" style="height: 80px; background-color: #26ADE4">
 
       <div class="drop_down">
@@ -13,31 +16,126 @@
           <a href="/explore">Explore</a>
 
         </div>
+
       </div>
 
       <input type = "search" id = "search" placeholder="Search music, artists..."/>
-      <img class="playlist_icon" src=\icons\Playlist.png alt=""/>
-      <img class="user_icon" src=\icons\Head.png alt=""/>
+
+      <div class="menu_bar_icons">
+        <img class="playlist_icon" src=\icons\playlist2.png alt=""/>
+        <img class="user_icon" src=\icons\Head.png alt=""/>
+      </div>
 
     </div>
 
     <div class="music_recommendation_content">
-      <img class="musiclist_icon" src=radiohead.jpg alt="" />
-      <img class="musiclist_icon" src=radiohead.jpg alt="" />
-      <img class="musiclist_icon" src=radiohead.jpg alt="" />
-      <div class="loading">
+
+            <!-- <img class="play_all_icon" src="\icons\Playall.png" alt="" />
+            <p class="play_all">Play All</p> -->
+            <hr>
+      <!-- Here go the songs -->
+            <div class="music_box">
+
+              <div class="music_info">
+                <p class="song_name">Stop Stop</p>
+                <p class="artist">The Black Keys</p>
+              </div>
+
+              <div class="icons">
+                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
+                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
+              </div>
+
+              <hr>
+
+            </div>
+
+
+
+            <div class="music_box">
+
+              <div class="music_info">
+                <p class="song_name">Earth</p>
+                <p class="artist">Michael Jackson</p>
+              </div>
+
+              <div class="icons">
+                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
+                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
+              </div>
+
+              <hr>
+
+            </div>
+
+            <div class="music_box">
+
+              <div class="music_info">
+                <p class="song_name">I Have Nothing</p>
+                <p class="artist">Withney Huston</p>
+              </div>
+
+              <div class="icons">
+                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
+                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
+              </div>
+
+              <hr>
+
+            </div>
+
+            <div class="music_box">
+
+              <div class="music_info">
+                <p class="song_name">Loser</p>
+                <p class="artist">Beck</p>
+              </div>
+
+              <div class="icons">
+                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
+                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
+              </div>
+
+              <hr>
+
+            </div>
+
+
+            <div class="music_box">
+
+              <div class="music_info">
+                <p class="song_name">Enter Sandman</p>
+                <p class="artist">Metallica</p>
+              </div>
+
+              <div class="icons">
+                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
+                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
+              </div>
+
+              <hr>
+
+            </div>
+      <!--  Here end the songs -->
+
+      <!--<div class="loading">
         <p>pull to load</p>
         <img class="loading_bar" src=\icons\Loading.png alt=""/>
-
-      </div>
+      </div>-->
     </div>
 
     <div class="bottom_bar">
 
-      <img class="recommend_icon" src=\icons\Recommend.png alt="">
-      <img class="mymusic_icon" src=\icons\MyMusic.png alt="">
-      <button class="recommend">Recommend</button>
-      <button class="my_music">My Music</button>
+      <div class="recommend_button_container">
+        <img class="recommend_icon" src=\icons\Recommend.png alt="">
+        <button class="recommend">Recommend</button>
+      </div>
+
+      <div class="my_music_button_container">
+        <img class="mymusic_icon" src=\icons\MyMusic.png alt="">
+        <button class="my_music">My Music</button>
+      </div>
+
 
     </div>
   </div>
