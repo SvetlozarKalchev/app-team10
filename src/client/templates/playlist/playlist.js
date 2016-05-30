@@ -2,6 +2,9 @@ import { Template } from 'meteor/templating';
 
 import './playlist.html'
 
+var isDropDownOpen = false;
+var isMoreMusicInfoMenuOpen = false;
+
 Template.playlist.events({
   //add redirect to explore page
   'click .explore'(event){
@@ -29,7 +32,17 @@ Template.playlist.events({
   },
 
   'click .menu_icon'(event){
-    document.getElementById('drop_down_content').style.display='block';
+
+    var menu = document.getElementById('drop_down_content');
+
+    if(isDropDownOpen) {
+      menu.style.display = 'none';
+
+    } else {
+      menu.style.display = 'block'
+    }
+
+    isDropDownOpen = !isDropDownOpen;
   },
 
   'click .song_list_content'(event){
@@ -37,11 +50,23 @@ Template.playlist.events({
   },
 
   'click .more_info_icon'(event){
-    document.getElementById('more_info_content').style.display='block';
+    var moreInfo = document.getElementById('more_info_content');
+
+    if(isMoreMusicInfoMenuOpen) {
+      moreInfo.style.display = 'none';
+
+    } else {
+      moreInfo.style.display = 'block';
+    }
+
+    isMoreMusicInfoMenuOpen = !isMoreMusicInfoMenuOpen;
   },
 
+
   'click .music_info'(event){
-    document.getElementById('more_info_content').style.display='none';
+    var musicInfo = document.getElementById('more_info_content').style.display='none';
+
+    FlowRouter.redirect('/music-player')
   },
 
   'click .search_content'(event){
