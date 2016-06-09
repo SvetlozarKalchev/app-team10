@@ -85,21 +85,3 @@ FlowRouter.route('/user-info', {
   }
 
 });
-
-// Redesigned pages
-
-FlowRouter.route('/genre', {
-
-  action: () => {
-    BlazeLayout.render('app', { content: 'bootflat_genre_selection'});
-  }
-
-});
-
-FlowRouter.route('/recommend', {
-
-  action: () => {
-    BlazeLayout.render('app', { content: 'bootflat_recommended_song'});
-  }
-
-});
