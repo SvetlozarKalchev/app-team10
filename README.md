@@ -1,42 +1,35 @@
 ## Readme - M3
 
-* Gruppe:	[Montag|Dienstag|Mittwoch|Freitag]
-* Team-Nr.:
-* Projektthema:
+* Gruppe:	[Mittwoch]
+* Team-Nr.: 	10
+* Projektthema: One Million Song Database
+
 
 ### Implementierung
 
-Framework:	[iOS | Android | Cordova - iOS | Cordova - Android]
+Framework:	[Meteor(uses Cordova)]
 
-API-Version:	[Android Lollipop 5.1 | iOS 9 â€¦ ]
+API-Version:	[Android 5.1 API22]
 
-GerÃ¤t(e), auf dem(denen) getestet wurde:
-[Nexus 5, iPhone 5, iPad Air, etc.]
+Gerät, auf dem getestet wurde:
+[Nexus 5X]
 
 Externe Libraries und Frameworks:
-[...]
+[FlowRouter - routing package for meteor]
 
 Dauer der Entwicklung:
-[XX Stunden]
+[14 days]
 
-Weitere Anmerkungen:
-[...]
 
 ### Directory Structure
 
-#####./builds
-Contains built versions of the app. In our case, this is an
-android studio project.
-
-#####./client
-All code that runs on the user-facing side. CSS code for each page
-is put in a separate template file.
-
-#####./docs
-Documentation for the project.
-
 #####./public
-Assets like images and videos belong here.
+Assets like images and videos are put here.
 
-#####./server
-All code that runs on the server. Stuff like database connections, user authentication, recommendation engine, etc.
+#####./src/client
+All code that runs on the user-facing side. CSS code for each page
+is put in a separate template file. Every template is compiled
+to main.css at the end.
+
+#####./src/server
+All code that runs on the server. Stuff like database connections, user authentication, recommendation engine, etc. Currently empty. Backend logic will be implemented for MS4.

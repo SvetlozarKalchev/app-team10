@@ -30,7 +30,7 @@ Template.artist_selection.events({
   'click .artist_box'(event) {
     // Select only the element that has an event listener attached
     var clickedElement = event.currentTarget;
-
+    
     if(!isArtistBoxClicked){
 
     }
