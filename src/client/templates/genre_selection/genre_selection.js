@@ -28,6 +28,8 @@ import { Template } from 'meteor/templating';
 
     if(!isGenreBoxClicked){
       var genre = clickedElement.firstElementChild.innerHTML;
+      saveGenreNames(genre);
+      isGenreBoxClicked = true;
     }
     else {
 
@@ -40,6 +42,6 @@ import { Template } from 'meteor/templating';
 
     // Save selected artist name
 
-    saveGenreNames(genre);
+
   }
 });
