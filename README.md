@@ -1,8 +1,9 @@
 ## Readme - M3
 
-* Gruppe:	[Montag|Dienstag|Mittwoch|Freitag]
-* Team-Nr.:
-* Projektthema:
+* Gruppe:	[Mittwoch]
+* Team-Nr.: 	10
+* Projektthema: One Million Song Database
+
 
 ### Implementierung
 
@@ -19,22 +20,16 @@ Externe Libraries und Frameworks:
 Dauer der Entwicklung:
 [14 days]
 
+
 ### Directory Structure
-
-#####./builds
-Contains built versions of the app. In our case, this is an
-android studio project.
-
-#####./client
-All code that runs on the user-facing side. CSS code for each page
-is put in a separate template file. Every template is compiled
-to main.css at the end.
-
-#####./docs
-Documentation for the project. Currently empty.
 
 #####./public
 Assets like images and videos are put here.
 
-#####./server
+#####./src/client
+All code that runs on the user-facing side. CSS code for each page
+is put in a separate template file. Every template is compiled
+to main.css at the end.
+
+#####./src/server
 All code that runs on the server. Stuff like database connections, user authentication, recommendation engine, etc. Currently empty. Backend logic will be implemented for MS4.
