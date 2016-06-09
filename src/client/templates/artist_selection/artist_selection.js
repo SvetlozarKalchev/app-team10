@@ -22,7 +22,7 @@ Template.artist_selection.events({
 
     sendSelectedArtists();
 
-    FlowRouter.redirect('/register');
+    FlowRouter.redirect('/login');
 
   },
 
