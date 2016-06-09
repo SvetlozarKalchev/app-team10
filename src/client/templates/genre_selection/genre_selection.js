@@ -10,7 +10,7 @@ import { Template } from 'meteor/templating';
     console.log(selectedGenres);
   }
 
-  var isArtistBoxClicked = false;
+  var isGenreBoxClicked = false;
 
   Template.genre_selection.events({
     // This code adds a redirect event to the next button on the page
@@ -26,16 +26,20 @@ import { Template } from 'meteor/templating';
     // Select only the element that has an event listener attached
     var clickedElement = event.currentTarget;
 
-    if(!isArtistBoxClicked){
+    if(!isGenreBoxClicked){
+      var genre = clickedElement.firstElementChild.innerHTML;
+    }
+    else {
 
     }
+
     var currentClass = clickedElement.getAttribute('class');
 
     // Add new class to the element with an attached event listener
     clickedElement.setAttribute('class', currentClass+' highlight')
 
     // Save selected artist name
-    var genre = clickedElement.firstElementChild.innerHTML;
-    saveGenreNames(artist);
+
+    saveGenreNames(genre);
   }
 });
