@@ -4,7 +4,7 @@ white = #fff
 
 .margin-element
   width 100vw
-  height 90px
+  height 100px
 
 .search_content
   position absolute
@@ -24,7 +24,7 @@ white = #fff
 
 .menu_icon
   position relative
-  left 10px
+  left 25px
   top 5px
   width 40px
   height 32px
@@ -32,18 +32,19 @@ white = #fff
 .drop_down_content
   display none
   position absolute
+  width 100vw
   top 60px
   z-index 5
   background-color #f9f9f9
-  width 250px
+  text-align center
   box-shadow 0px 8px 16px 0px rgba(0,0,0,0,2)
 
 .drop_down_content a
-  color black
-  padding 12px 16px
-  text-decoration none
-  font-size: 20px
   display block
+  padding 12px 16px
+  color black
+  text-decoration none
+  font-size: 22px
 
 .drop_down_content a:hover
   background-color #f1f1f1
@@ -60,59 +61,46 @@ white = #fff
   border-radius 7px
   text-align center
 
+
 // Styles for the icons on the right corner of the search bar
 .menu_bar_icons
-  position absolute
-  margin 0
-  right 10px
-  top 22px
-  bottom 0
+  width 110px
+  height 100%
+  float right
+  margin-right 20px
+  text-align center
+  line-height 110px
+
+icon_size = 40px
 
 .playlist_icon
   position relative
-  width 35px
-  height 35px
-  margin-right 15px
-
+  width icon_size
+  height icon_size
+  margin-right 20px
 .user_icon
   position relative
-  width 35px
-  height 35px
+  width icon_size
+  height icon_size
 
 .song_list_content
   width 100%
-  height 800px
+  height auto
   div
     display inline-block
-  hr
-    align center
-    color #FFFFFF
-    size 1px
-    width 360px
 
-.play_all_icon
-  width 30px
-  height 30px
-  position relative
-  top 5px
-  left 15px
 
-.play_all
-  position absolute
-  top 75px
-  left 50px
-  font-size 18px
-  font-family Georgia
-  color #FFFFFF
+// Styles for each song element displayed
 
 .music_box
-  width 100%
+  font-family "Oswald", sans-serif
+  width 90%
   height 70px
-  hr
-    align center
-    color #FFFFFF
-    size 1px
-    width 360px
+  margin-left 5%
+  margin-bottom 2px
+  background-color #F7F7F7
+  border-bottom 2px solid #fff
+  color black
 
 .music_info
   float left
@@ -124,14 +112,23 @@ white = #fff
   width 50%
   height 50px
   line-height 0.75
+  .artist
+    font-style italic
 
-// Icons in the song element
+// Styles for the song elements
+song_element_icons_size = 30px
 .icons
-  position relative
   float right
-  right 15px
-  height 70px
-  top 10px
+  height 100%
+  margin-right 15px
+  line-height 90px
+  .heart_icon
+    width song_element_icons_size
+    height song_element_icons_size
+    margin-right 10px
+  .more_info_icon
+    width song_element_icons_size
+    height song_element_icons_size
 
 .song_name
   position relative
@@ -145,16 +142,7 @@ white = #fff
   left 10px
   font-size 15px
 
-.heart_icon
-  position relative
-  width 30px
-  height 30px
-  bottom 8px
 
-.more_info_icon
-  position relative
-  width 45px
-  height 45px
 
 .more_info_content
   display none
@@ -185,52 +173,24 @@ white = #fff
 
 // Footer where the explore and my music buttons are
 .bottom_bar
+  font-family Arial, sans-serif
   position absolute
   width 100vw
   height 70px
   bottom 0
-
-.bottom_bar div
-  display inline-block
-
-.explore_button_container
-  position absolute
-  left 0
-  bottom 40px
-  width 50vw
-  height 70px
-
-.explore_button_container button
-  height 70px
-  background-color transparent
-  font-size 25px
-  color #FFFFFF
-  width 99%
-
-.explore_icon
-  position relative
-  top 55px
-  left 10px
-  width 35px
-  height 35px
-
-.my_music_button_container
-  position absolute
-  right 0
-  width 50vw
-  height 70px
-
-.my_music_button_container button
-  position relative
-  width 99%
-  height 70px
-  background-color transparent
-  font-size 25px
-  color #FFFFFF
-
-.mymusic_icon
-  position absolute
-  top 22px
-  left 8px
-  width 30px
-  height 30px
+  div
+    display inline-block
+  button
+    background-color #F06B50
+    float left
+    width 50vw
+    height 100%
+    border none
+    border-left 1px solid black
+    border-right 1px solid black
+    font-size 20px
+    font-weight bold
+  .explore
+    background-color #FAF537
+  .my_music
+    background-color #FC473E
