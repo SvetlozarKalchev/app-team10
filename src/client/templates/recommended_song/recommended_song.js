@@ -123,7 +123,7 @@ Template.recommended_song.onRendered(function() {
     }
   }
 
-  ajax.open('GET', 'http://localhost:8000/api/recommended', true);
+  ajax.open('GET', 'http://188.166.29.5:8000/api/recommended', true);
   ajax.send();
 
 
