@@ -3,7 +3,7 @@ import { Template } from 'meteor/templating';
 import './user_info.html'
 
 Template.user_info.events({
-  'click .password'(event){
+  /*'click .password'(event){
     document.getElementById('change_password').style.display='block';
   },
 
@@ -13,9 +13,9 @@ Template.user_info.events({
 
   'click .cancel'(event){
     document.getElementById('change_password').style.display='none';
-  },
+  },*/
 
   'click .back_icon'(event){
-    FlowRouter.redirect('/playlist');
+    FlowRouter.redirect('/recommended-song');
   }
 })
