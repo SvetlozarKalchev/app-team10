@@ -1,4 +1,5 @@
-import { Template } from 'meteor/templating'
+import { Template } from 'meteor/templating';
+import { Session } from 'meteor/session';
 
 var isPlaying = false;
 
@@ -36,7 +37,7 @@ Template.music_player.events({
         // Increment the bar value and set it in the HTML
         currentBarValue+=5;
         progressBar.setAttribute('value', currentBarValue);
-      }, 2000)
+      }, 1000)
 
       isPlaying = true;
 
@@ -47,4 +48,10 @@ Template.music_player.events({
     }
   }
 
+});
+
+Template.music_player.helpers({
+  song: function() {
+    return Session.get('chosenSong');
+  }
 });
