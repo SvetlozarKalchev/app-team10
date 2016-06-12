@@ -46,13 +46,13 @@ FlowRouter.route('/register', {
 });
 
 
-// FlowRouter.route('/explore', {
-//
-//   action: () => {
-//     BlazeLayout.render('app', { content: 'explore' });
-//   }
-//
-// });
+FlowRouter.route('/explore', {
+
+  action: () => {
+    BlazeLayout.render('app', { content: 'explore' });
+  }
+
+});
 
 FlowRouter.route('/music-player', {
 
@@ -61,14 +61,14 @@ FlowRouter.route('/music-player', {
   }
 
 });
-
-FlowRouter.route('/playlist', {
-
-  action: () => {
-    BlazeLayout.render('app', { content: 'playlist' });
-  }
-
-});
+//
+// FlowRouter.route('/playlist', {
+//
+//   action: () => {
+//     BlazeLayout.render('app', { content: 'playlist' });
+//   }
+//
+// });
 
 FlowRouter.route('/recommended-song', {
 

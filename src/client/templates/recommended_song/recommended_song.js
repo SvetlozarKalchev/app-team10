@@ -6,6 +6,8 @@ import './recommended_song.html'
 var isDropDownOpen = false;
 var isMoreMusicInfoMenuOpen = false;
 
+Session.set('favorites', new Array());
+
 Template.recommended_song.events({
   //add redirect to explore page
   'click .explore'(event){
@@ -13,7 +15,7 @@ Template.recommended_song.events({
   },
 
   'click .my_music'(event){
-    FlowRouter.redirect('/playlist');
+    FlowRouter.redirect('/explore');
   },
 
   'click .playlist_icon'(event){
@@ -46,9 +48,21 @@ Template.recommended_song.events({
     isDropDownOpen = !isDropDownOpen;
   },
 
-  // 'click .song_list_content'(event){
-  //   document.getElementById('drop_down_content').style.display='none';
-  // },
+  'click .heart_icon'(event) {
+    event.stopPropagation();
+    // Get the chosen song by extracting the song name and title from
+    // the HTML element that got clicked.
+    var favoritesList = Session.get('favorites');
+
+    var musicBox = event.target.parentElement.parentElement;
+    var songName = musicBox.childNodes[1].firstElementChild.innerHTML;
+
+    console.log(songName);
+    favoritesList.push(songName);
+    Session.set('favorites', favoritesList);
+
+    // alert(`Added ${event.target.innerHTML} to favorites`);
+  },
 
   'click .more_info_icon'(event){
     var moreInfo = document.getElementById('more_info_content');
@@ -68,7 +82,6 @@ Template.recommended_song.events({
 
     // Get the chosen song by extracting the song name and title from
     // the HTML element that got clicked.
-    console.log(event.target.innerHTML);
     Session.set('chosenSong', event.target.innerHTML);
 
     FlowRouter.redirect('/music-player')
