@@ -1,142 +1,54 @@
 <template name="explore">
-  <div class="container">
+  <div class="container recommended_song">
 
     <div class="margin-element"></div>
 
-    <div class="search_content" style="height: 80px; background-color: #26ADE4">
+    <div class="search_content">
 
       <div class="drop_down">
 
         <img class="menu_icon" src="\icons\Menu.png" alt="" />
+
         <div id="drop_down_content" class="drop_down_content">
 
           <a href="/music-player">Music Player</a>
-          <a href="/playlist">Playlist</a>
           <a href="/recommended-song">Recommend</a>
-          <a href="/explore">Explore</a>
 
         </div>
 
       </div>
 
-      <input type = "search" id = "search" placeholder="Search music, artists..."/>
+      <!-- <input class='search' type="search_bar" name="search_bar" placeholder="Search music, artists..."> -->
 
       <div class="menu_bar_icons">
-        <img class="playlist_icon" src=\icons\playlist2.png alt=""/>
-        <img class="user_icon" src=\icons\Head.png alt=""/>
+        <img class="playlist_icon" src=\icons\go-to-player.png alt=""/>
+        <img class="user_icon" src=\icons\user.png alt=""/>
       </div>
 
     </div>
 
-    <div class="music_recommendation_content">
+    <div class="song_list_content">
 
-            <!-- <img class="play_all_icon" src="\icons\Playall.png" alt="" />
-            <p class="play_all">Play All</p> -->
-            <hr>
-      <!-- Here go the songs -->
-            <div class="music_box">
+<!-- Here go the songs -->
 
-              <div class="music_info">
-                <p class="song_name">Stop Stop</p>
-                <p class="artist">The Black Keys</p>
-              </div>
+    {{ #each song in favorites }}
+      <div class="music_box">
 
-              <div class="icons">
-                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
-                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
-              </div>
+        <div class="music_info">
+          <p class="song_name">{{ song }}</p>
+        </div>
 
-              <hr>
+      
+      </div>
+    {{ /each }}
 
-            </div>
-
-
-
-            <div class="music_box">
-
-              <div class="music_info">
-                <p class="song_name">Earth</p>
-                <p class="artist">Michael Jackson</p>
-              </div>
-
-              <div class="icons">
-                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
-                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
-              </div>
-
-              <hr>
-
-            </div>
-
-            <div class="music_box">
-
-              <div class="music_info">
-                <p class="song_name">I Have Nothing</p>
-                <p class="artist">Withney Huston</p>
-              </div>
-
-              <div class="icons">
-                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
-                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
-              </div>
-
-              <hr>
-
-            </div>
-
-            <div class="music_box">
-
-              <div class="music_info">
-                <p class="song_name">Loser</p>
-                <p class="artist">Beck</p>
-              </div>
-
-              <div class="icons">
-                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
-                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
-              </div>
-
-              <hr>
-
-            </div>
-
-
-            <div class="music_box">
-
-              <div class="music_info">
-                <p class="song_name">Enter Sandman</p>
-                <p class="artist">Metallica</p>
-              </div>
-
-              <div class="icons">
-                <img class="heart_icon" id="heart_icon" src=\icons\Heart.png alt=""/>
-                <img class="more_info_icon" src =\icons\MoreOption.png alt=""/>
-              </div>
-
-              <hr>
-
-            </div>
-      <!--  Here end the songs -->
-
-      <!--<div class="loading">
-        <p>pull to load</p>
-        <img class="loading_bar" src=\icons\Loading.png alt=""/>
-      </div>-->
+<!--  Here end the songs -->
     </div>
 
-    <div class="bottom_bar">
-
-      <div class="recommend_button_container">
-        <img class="recommend_icon" src=\icons\Recommend.png alt="">
-        <button class="recommend">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommend</button>
-      </div>
-
-      <div class="my_music_button_container">
-        <img class="mymusic_icon" src=\icons\MyMusic.png alt="">
-        <button class="my_music">My Music</button>
-      </div>
-
-
+    <div id="more_info_content" class="more_info_content">
+      <a href="/recommended-song">Find Similar Songs</a>
+      <a href="/music-player">Music Info</a>
     </div>
+
   </div>
 </template>
