@@ -11,6 +11,13 @@ crimson = #FE4365
   height 100vh
   text-align center
   overflow-x hidden
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0.5))), url('a.jpg') repeat 0 0;
+  background-size: 100vw;
+
+// Detect screen size and apply correct background image size
+@media(max-width 411px)
+  .start_screen_content
+    background-size: 100vw 100vh;
 
 .start_screen_content .page-title
   width 100vw
