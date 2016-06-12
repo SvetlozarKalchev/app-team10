@@ -26,12 +26,19 @@ import { Template } from 'meteor/templating';
     // Select only the element that has an event listener attached
     var clickedElement = event.currentTarget;
 
-    if(!isGenreBoxClicked){
-      var genre = clickedElement.firstElementChild.innerHTML;
-    }
-    else {
+function checkIfClicked() {
+  if(isGenreBoxClicked){
+    return false;
+    var genre = clickedElement.firstElementChild.innerHTML;
+    saveGenreNames(genre);
+  //  isGenreBoxClicked = true;
+  }
+  else {
+    return true;
 
-    }
+  }
+}
+
 
     var currentClass = clickedElement.getAttribute('class');
 
@@ -40,6 +47,6 @@ import { Template } from 'meteor/templating';
 
     // Save selected artist name
 
-    saveGenreNames(genre);
+
   }
 });
