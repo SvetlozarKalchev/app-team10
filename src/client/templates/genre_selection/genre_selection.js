@@ -28,7 +28,7 @@ function sendSelectedGenres(callback) {
     }
   }
 
-  ajax.open('POST', 'http://localhost:8000/api/songs', true);
+  ajax.open('POST', 'http://188.166.29.5:8000/api/songs', true);
   ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   ajax.send(selectedGenres);
 
