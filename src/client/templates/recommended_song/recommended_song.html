@@ -30,14 +30,13 @@
 
     <div class="song_list_content">
 
-      <!-- <img class="play_all_icon" src="\icons\Playall.png" alt="" />
-      <p class="play_all">Play All</p> -->
 <!-- Here go the songs -->
+
+    {{ #each song in songs }}
       <div class="music_box">
 
         <div class="music_info">
-          <p class="song_name">Stop Stop</p>
-          <p class="artist">The Black Keys</p>
+          <p class="song_name">{{ song }}</p>
         </div>
 
         <div class="icons">
@@ -45,11 +44,10 @@
           <img class="more_info_icon" src =\icons\more.png alt=""/>
         </div>
 
-
       </div>
+    {{ /each }}
 
-
-
+<!--
       <div class="music_box">
 
         <div class="music_info">
@@ -113,7 +111,7 @@
         </div>
 
 
-      </div>
+      </div> -->
 <!--  Here end the songs -->
     </div>
 
@@ -125,11 +123,29 @@
     <div class="bottom_bar">
 
         <!-- <img class="explore_icon" src=\icons\Explore.png alt="" > -->
-        <button class="explore">Add Artists</button>
+        <button class="explore">Add Genres</button>
 
         <!-- <img class="mymusic_icon" src=\icons\MyMusic.png alt="" > -->
         <button class="my_music">My Music</button>
 
     </div>
+  </div>
+</template>
+
+
+<!-- This is the template for each song element  -->
+<template name="music_box">
+  <div class="music_box">
+
+    <div class="music_info">
+      <p class="song_name">{{ songName }}</p>
+      <p class="artist">{{ artistName }}</p>
+    </div>
+
+    <div class="icons">
+      <img class="heart_icon" id="heart_icon" src=\icons\favorite.png alt=""/>
+      <img class="more_info_icon" src =\icons\more.png alt=""/>
+    </div>
+
   </div>
 </template>

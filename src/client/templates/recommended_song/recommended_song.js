@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import { Session } from 'meteor/session';
 
 import './recommended_song.html'
 
@@ -8,7 +9,7 @@ var isMoreMusicInfoMenuOpen = false;
 Template.recommended_song.events({
   //add redirect to explore page
   'click .explore'(event){
-    FlowRouter.redirect('/explore');
+    FlowRouter.redirect('/genre-selection');
   },
 
   'click .my_music'(event){
@@ -62,8 +63,13 @@ Template.recommended_song.events({
     isMoreMusicInfoMenuOpen = !isMoreMusicInfoMenuOpen;
   },
 
-  'click .music_info'(event){
+  'click .music_box'(event){
     var musicInfo = document.getElementById('more_info_content').style.display='none';
+
+    // Get the chosen song by extracting the song name and title from
+    // the HTML element that got clicked.
+    console.log(event.target.innerHTML);
+    Session.set('chosenSong', event.target.innerHTML);
 
     FlowRouter.redirect('/music-player')
   },
@@ -81,3 +87,41 @@ Template.recommended_song.events({
   }
 
 })
+
+var recommendedSongs;
+
+// On template render
+Template.recommended_song.onRendered(function() {
+  var ajax = new XMLHttpRequest();
+
+  // This defines what to do after a response
+  ajax.onreadystatechange = function() {
+    if(ajax.readyState === 4 && ajax.status === 200) {
+      recommendedSongs = JSON.parse(ajax.responseText);
+      // Turn received list of songs into an array, because
+      // it's received as plain text.
+      console.log(recommendedSongs);
+
+      // After receiving the songs, put them in the page list
+      // Session is a state variable. When it changes,
+      // the UI updates itself.
+      Session.set('recommendedSongs', recommendedSongs);
+
+    }
+  }
+
+  ajax.open('GET', 'http://localhost:8000/api/recommended', true);
+  ajax.send();
+
+
+
+});
+
+Template.recommended_song.helpers({
+  // Get list of recommended songs and render them
+  songs: function() {
+    var songs = Session.get('recommendedSongs')
+
+    return songs;
+  }
+});

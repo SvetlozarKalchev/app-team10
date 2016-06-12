@@ -46,13 +46,13 @@ FlowRouter.route('/register', {
 });
 
 
-FlowRouter.route('/explore', {
-
-  action: () => {
-    BlazeLayout.render('app', { content: 'explore' });
-  }
-
-});
+// FlowRouter.route('/explore', {
+//
+//   action: () => {
+//     BlazeLayout.render('app', { content: 'explore' });
+//   }
+//
+// });
 
 FlowRouter.route('/music-player', {
 
