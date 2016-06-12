@@ -50,7 +50,7 @@ Template.genre_selection.events({
       });
 
     } else {
-        alert("You haven't selected a genre! Please, select at least one.");
+        alert("You haven't selected a genre! Please, select at least one!");
     }
 
   },
@@ -68,14 +68,14 @@ Template.genre_selection.events({
       // Remove highlight styling from the selected element
       clickedElement.setAttribute('class', 'genre_box')
 
-      // Remove the genre from list after deselecting the element
+      // Remove the genre from the list after deselecting the element
       removeSelectedGenre(genre);
 
     } else {
       // Add highlight styling to the selected element
       clickedElement.setAttribute('class', currentClass+' highlight')
 
-      // Save selected artist name
+      // Save selected genre name
       saveGenreNames(genre);
     }
 
