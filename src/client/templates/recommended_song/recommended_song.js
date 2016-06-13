@@ -61,7 +61,7 @@ Template.recommended_song.events({
     favoritesList.push(songName);
     Session.set('favorites', favoritesList);
 
-    // alert(`Added ${event.target.innerHTML} to favorites`);
+    alert(`Added ${event.target.innerHTML} to favorites`);
   },
 
   'click .more_info_icon'(event){
